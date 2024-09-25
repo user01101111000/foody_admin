@@ -1,0 +1,108 @@
+.Products {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+.Products_preview {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productsLoading {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+.productsError {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.productsErrorContent {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: start;
+
+  gap: 1rem;
+}
+
+.productsErrorContent h1 {
+  font-family: var(--font-roboto);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Atext-color2);
+}
+
+.productsErrorContent button {
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--Asidebar-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.productList {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  align-content: start;
+
+  justify-content: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.productItem {
+  width: 12rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-roboto);
+  cursor: pointer;
+}
+
+.productsNotFound {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-roboto);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Atext-color2);
+}

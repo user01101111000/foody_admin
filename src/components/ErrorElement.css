@@ -1,0 +1,37 @@
+.errorComponentForReactQuery {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.errorComponentForReactQueryContent {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: start;
+
+  gap: 1rem;
+}
+
+.errorComponentForReactQueryContent h1 {
+  font-family: var(--font-roboto);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Atext-color2);
+}
+
+.errorComponentForReactQueryContent button {
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--Asidebar-color);
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}

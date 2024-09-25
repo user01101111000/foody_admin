@@ -1,0 +1,170 @@
+.layout_header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--Abox-color1);
+
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 2rem;
+
+  font-family: var(--font-roboto);
+
+  position: relative;
+}
+
+.layout_header_left {
+  display: flex;
+  gap: 1.5rem;
+
+  align-items: center;
+}
+.layout_header_left_hamburger_fig {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: none;
+
+  cursor: pointer;
+}
+
+.layout_header_left_hamburger_fig img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.layout_header_right {
+  display: flex;
+  gap: 1.5rem;
+
+  align-items: center;
+}
+
+.layout_header_avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  position: relative;
+  user-select: none;
+}
+.avatarMenu {
+  position: absolute;
+  top: 130%;
+  left: 0rem;
+  width: auto;
+  background-color: white;
+  border-radius: 4px;
+  padding-block: 0.5rem;
+  padding-inline: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 100;
+}
+
+.avatarMenu > p {
+  padding: 0.2rem;
+  border-radius: 2px;
+  transition: 0.15s;
+  text-wrap: nowrap;
+}
+
+.avatarMenu > p:hover {
+  background-color: var(--Abutton-color1);
+  color: white;
+}
+
+.layout_header_avatar h1 {
+  color: white;
+  font-weight: 500;
+}
+
+.avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.addProduct_btn {
+  border: none;
+  outline: none;
+  background-color: var(--Abutton-color1);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+
+  font-weight: 800;
+}
+
+.addProduct_btn_mobile {
+  display: none;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  padding: 0 !important;
+}
+
+.layout_header_left_logo_fig {
+  height: 4rem;
+  width: 6rem;
+  cursor: pointer;
+}
+
+.layout_header_left_logo_fig img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+.toast_container_header {
+  font-size: 1rem;
+  font-family: var(--font-roboto);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 700px) {
+  .layout_header_left_hamburger_fig {
+    display: block;
+  }
+  .addProduct_btn {
+    display: none;
+  }
+  .addProduct_btn_mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .layout_header_avatar h1 {
+    display: none;
+  }
+
+  .layout_header_right {
+    gap: 0.7rem;
+  }
+
+  .addProduct_btn {
+    padding: 1rem;
+  }
+
+  .layout_header_left {
+    gap: 1rem;
+  }
+}

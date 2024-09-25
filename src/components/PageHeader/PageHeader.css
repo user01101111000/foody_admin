@@ -1,0 +1,52 @@
+.PageHeader {
+  background-color: var(--Abox-color1);
+  padding: 0.8rem;
+
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PageHeader > h1 {
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
+
+  padding-block: 1rem;
+}
+
+.PageHeaderBoxes {
+  display: flex;
+
+  justify-content: end;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.pageHeader_box_wrapper {
+  width: 15rem;
+}
+
+@media screen and (max-width: 500px) {
+  .PageHeader {
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .PageHeaderBoxes {
+    display: flex;
+
+    justify-content: end;
+    align-items: center;
+
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

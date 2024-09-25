@@ -1,0 +1,39 @@
+.pagination_area_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination_area2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  flex-wrap: nowrap;
+}
+.pagination_btn2 {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.5rem;
+
+  background-color: white;
+
+  color: var(--Asidebar-color);
+
+  cursor: pointer;
+
+  font-family: var(--font-roboto);
+  font-size: 1rem;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activePag2 {
+  background-color: var(--Asidebar-color) !important;
+  color: white !important;
+}

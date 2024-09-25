@@ -1,0 +1,70 @@
+.CustomSelect {
+  width: 100%;
+
+  background-color: var(--Abox-color3);
+
+  border-radius: 14px;
+  cursor: pointer;
+  padding: 1rem;
+
+  font-family: var(--font-roboto);
+
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+  user-select: none;
+}
+
+.CustomSelect h1 {
+  font-size: 1rem !important;
+  text-wrap: nowrap;
+}
+
+.CustomSelect_list {
+  position: absolute;
+  top: 120%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  width: 100%;
+  background-color: var(--Abox-color3);
+
+  border-radius: 14px;
+
+  max-height: 20rem;
+  overflow: auto;
+
+  padding: 1rem;
+}
+.CustomSelect_list li {
+  cursor: pointer;
+  border-radius: 14px;
+
+  padding: 1rem;
+}
+
+.CustomSelect_list li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.CustomSelect_arrow_fig {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.CustomSelect_arrow_fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

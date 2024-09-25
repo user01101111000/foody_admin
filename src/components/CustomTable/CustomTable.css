@@ -1,0 +1,98 @@
+.CustomTable_wrapper {
+  overflow-x: auto;
+}
+
+.CustomTable {
+  width: 100%;
+  min-width: 50rem !important;
+  background-color: white;
+  border: thin solid rgba(0, 0, 0, 0.3);
+
+  border-radius: 5px;
+
+  font-family: var(--font-openSans);
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #00072b;
+}
+
+.CustomTable_img_fig {
+  height: 3.5rem;
+  width: 3.5rem;
+
+  margin-inline: auto;
+}
+
+.CustomTable_img_fig img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  border-radius: 6px;
+}
+
+.CustomTable th {
+  text-align: center;
+  font-weight: 800;
+
+  padding: 0.7rem;
+}
+
+.CustomTable tr {
+  border: thin solid rgba(0, 0, 0, 0.3);
+
+  text-align: center;
+}
+
+.CustomTable td {
+  text-align: center;
+  vertical-align: middle;
+
+  padding: 0.5rem;
+}
+
+.CustomTable_id {
+  border: thin solid rgba(0, 0, 0, 0.233);
+
+  display: inline-block;
+  width: 10rem !important;
+  padding: 0.5rem;
+
+  border-radius: 1rem;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.CustomTable_iconly {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CustomTable_iconly h1 {
+  width: 10rem;
+}
+
+.CustomTable_iconly_img_fig {
+  cursor: pointer;
+
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.CustomTable_iconly_img_fig img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.normalTDText {
+  max-width: 30rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

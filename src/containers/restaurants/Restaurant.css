@@ -1,0 +1,95 @@
+.Restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  height: 100%;
+  width: 100%;
+
+  font-family: var(--font-roboto);
+}
+
+.restaurant_preview {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.AddRestaurant_btn {
+  border: none;
+  outline: none;
+  background-color: var(--Abutton-color1);
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+
+  padding: 1.1rem 0;
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  width: 100%;
+}
+
+.alphabetic-wrapper {
+  background-color: var(--Abox-color1);
+  padding: 1rem;
+
+  border-radius: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alphabetic-wrapper > h1 {
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+
+  padding-block: 1rem;
+}
+.alphabetic-container {
+  width: 15rem;
+}
+
+.restaurantsLoading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  height: 100%;
+  width: 100%;
+
+  font-family: var(--font-roboto);
+}
+.restaurantList {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  align-content: start;
+
+  justify-content: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .alphabetic-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,28 @@
+.editButtons_table {
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.editButtons_table img {
+  cursor: pointer;
+
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.editButtons_table_td {
+  width: 7rem;
+}
+
+.CustomTable_tr {
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.CustomTable_tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

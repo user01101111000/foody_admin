@@ -1,0 +1,18 @@
+.orders_box {
+  background-color: var(--Abox-color1);
+  grid-area: a;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.orders_box h1 {
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}

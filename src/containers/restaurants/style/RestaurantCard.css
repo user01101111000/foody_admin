@@ -1,0 +1,78 @@
+.RestaurantCard {
+  background-color: white;
+
+  min-width: 16rem;
+
+  height: 7rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-inline: 0.5rem;
+
+  border-radius: 5px;
+
+  font-weight: 500;
+  font-family: var(--font-roboto);
+
+  cursor: pointer;
+}
+
+.RestaurantCard_img_fig {
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.RestaurantCard_img_fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.RestaurantCard_info {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0.5rem;
+  gap: 0.5rem;
+}
+
+.RestaurantCard_info h1 {
+  font-size: 1rem;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 9rem;
+  white-space: nowrap;
+}
+
+.RestaurantCard_info p {
+  font-size: 0.8rem;
+  color: #828282;
+}
+
+.RestaurantCard_icons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.RestaurantCard_icons img {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .RestaurantCard {
+    min-width: 15rem;
+    padding: 0.7rem;
+  }
+}

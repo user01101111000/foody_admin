@@ -1,0 +1,17 @@
+.total_salary_box {
+  background-color: var(--Abox-color1);
+  grid-area: b;
+  padding: 1.5rem 2.5rem 2.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.total_salary_box h1 {
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,19 @@
+.Login {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--Amain-black);
+  padding-inline: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoadingSuspense {
+  background-color: var(--Amain-black);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,94 @@
+@import url("./fonts/fonts.css");
+
+:root {
+  /* ------------------------------ Fonts ------------------------------ */
+
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-openSans: "Open Sans", sans-serif;
+  --font-mukta: "Mukta", sans-serif;
+
+  /* ------------------------------ Colors ------------------------------ */
+
+  /* ---- Admin ---- */
+
+  --Amain-black: #1e1e30;
+
+  --Asidebar-color: #c74feb;
+
+  --Atext-color1: #fcddec;
+  --Atext-color2: #c7c7c7;
+  --Atext-color3: #f5f5f5;
+  --Atext-color4: #8e8e93;
+  --Atext-color5: #00b2a9;
+
+  --Abutton-color1: #c035a2;
+  --Abutton-color2: #d63626;
+
+  --Abox-color1: #27283c;
+  --Abox-color2: #38394e;
+  --Abox-color3: #5a5b70;
+  --Abox-color4: #ffffff;
+  --Abox-color5: #43445a;
+}
+
+::selection {
+  background-color: var(--Asidebar-color);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--Abox-color2);
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--Asidebar-color);
+}
+
+.swal2-popup {
+  font-size: 1rem !important;
+  font-family: var(--font-roboto);
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  html {
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  html {
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  html {
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  html {
+    font-size: 11px !important;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  html {
+    font-size: 10px !important;
+  }
+}

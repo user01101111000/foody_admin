@@ -1,0 +1,29 @@
+.action_items_box {
+  background-color: var(--Abox-color1);
+  grid-area: d;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  padding: 1.5rem 2rem 2.5rem 2rem;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.action_items_box h1 {
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.action_items_box p {
+  margin: auto;
+  color: var(--Atext-color2);
+  font-family: var(--font-roboto);
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}

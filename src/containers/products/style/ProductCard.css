@@ -1,0 +1,86 @@
+.ProductCard {
+  width: 12rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--font-roboto);
+  cursor: pointer;
+}
+.ProductCard_img_fig {
+  width: 100%;
+  height: 8rem;
+}
+
+.ProductCard_img_fig img {
+  border-radius: 4px;
+
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.ProductCard_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+.ProductCard_info_names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.ProductCard_info_names h1 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--Amain-black);
+}
+
+.ProductCard_info_names p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--Atext-color4);
+}
+
+.ProductCard_info_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.ProductCard_info_footer h1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Atext-color5);
+}
+
+.ProductCard_info_footer_icons {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.ProductCard_info_footer_icons img {
+  cursor: pointer;
+}
+
+.ProductCard_info_footer_icons_edit {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.ProductCard_info_footer_icons_delete {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .ProductCard {
+    max-width: 12rem;
+    padding: 0.7rem;
+  }
+}

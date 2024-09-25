@@ -1,0 +1,28 @@
+.sidebar {
+  width: 19rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s;
+}
+
+.showSideMenu {
+  right: 0 !important;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    right: 150%;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100vh !important;
+    width: 100% !important;
+
+    z-index: 1000;
+  }
+}
