@@ -56,6 +56,7 @@ export default function RestaurantCard({
           key={id.stringValue}
           width={"5rem"}
           height={"5rem"}
+          borderRadius="5px"
           backgroundColor="#1E1E30"
         />
       )}

@@ -27,6 +27,7 @@ export default function TDComponent({ td, editable }) {
             <Skeleton
               width="3.5rem"
               height="3.5rem"
+              borderRadius="6px"
               backgroundColor="#1E1E30"
             />
           )}

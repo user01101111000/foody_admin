@@ -54,6 +54,7 @@ export default function ProductCard({
           key={id.stringValue}
           width={"100%"}
           height={"8rem"}
+          borderRadius="4px"
           backgroundColor="#1E1E30"
         />
       )}
