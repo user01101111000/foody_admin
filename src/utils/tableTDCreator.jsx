@@ -1,6 +1,6 @@
 import { FaWhatsapp } from "react-icons/fa";
 
-function tableTDCreator(singleData, row, show, setShow) {
+function tableTDCreator(singleData, row, show, setShow, setShowImg) {
   switch (singleData?.type) {
     case "image":
       return (
@@ -9,6 +9,7 @@ function tableTDCreator(singleData, row, show, setShow) {
             src={singleData.data}
             alt={"image_" + row[0].data}
             loading="lazy"
+            onLoad={() => setShowImg(true)}
           />
         </figure>
       );

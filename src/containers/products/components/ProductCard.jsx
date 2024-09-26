@@ -2,12 +2,13 @@ import "../style/ProductCard.css";
 import edit from "../../../assets/icons/edit.svg";
 import deleteIcon from "../../../assets/icons/delete.svg";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Modal from "../../../components/Modal/Modal";
 import AddProductContent from "../../../components/Contents/AddProductContent";
 import { useTranslation } from "react-i18next";
 import { alertShow } from "../../../utils/showAlert";
 import useDeleteProductsMutation from "../../../hooks/api/useDeleteProductsMutation";
+import Skeleton from "../../../components/skeleton/Skeleton";
 
 export default function ProductCard({
   id,
@@ -21,6 +22,7 @@ export default function ProductCard({
 }) {
   const [show, setShow] = useState(false);
   const { t } = useTranslation();
+  const [showImg, setShowImg] = useState(false);
 
   const { mutateAsync } = useDeleteProductsMutation();
 
@@ -30,14 +32,31 @@ export default function ProductCard({
     }, t);
   }
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = image.stringValue;
+    img.onload = () => {
+      setShowImg(true);
+    };
+  }, [image.stringValue]);
+
   return (
     <motion.div className="ProductCard" variants={item}>
-      <figure
-        className="ProductCard_img_fig"
-        onClick={() => setPreview([true, { name, image }])}
-      >
-        <img src={image.stringValue} alt={name.stringValue} loading="lazy" />
-      </figure>
+      {showImg ? (
+        <figure
+          className="ProductCard_img_fig"
+          onClick={() => setPreview([true, { name, image }])}
+        >
+          <img src={image.stringValue} alt={name.stringValue} loading="lazy" />
+        </figure>
+      ) : (
+        <Skeleton
+          key={id.stringValue}
+          width={"100%"}
+          height={"8rem"}
+          backgroundColor="#1E1E30"
+        />
+      )}
 
       <div className="ProductCard_info">
         <div className="ProductCard_info_names">

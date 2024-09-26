@@ -4,10 +4,11 @@ import edit_img from "../../../assets/icons/edit.svg";
 import delete_img from "../../../assets/icons/delete.svg";
 import Modal from "../../../components/Modal/Modal";
 import AddRestaurantContent from "../../../components/Contents/AddRestaurantContent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { alertShow } from "../../../utils/showAlert";
 import useDeleteRestaurantMutation from "../../../hooks/api/useDeleteRestaurantMutation";
+import Skeleton from "../../../components/skeleton/Skeleton";
 
 export default function RestaurantCard({
   id,
@@ -22,7 +23,7 @@ export default function RestaurantCard({
   setPreview,
 }) {
   const [show, setShow] = useState(false);
-
+  const [showImg, setShowImg] = useState(false);
   const { t } = useTranslation();
 
   const { mutateAsync } = useDeleteRestaurantMutation();
@@ -33,14 +34,31 @@ export default function RestaurantCard({
     }, t);
   }
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = image.stringValue;
+    img.onload = () => {
+      setShowImg(true);
+    };
+  }, [image.stringValue]);
+
   return (
     <motion.div className="RestaurantCard" variants={item}>
-      <figure
-        className="RestaurantCard_img_fig"
-        onClick={() => setPreview([true, { name, image }])}
-      >
-        <img src={image.stringValue} alt={name.stringValue} loading="lazy" />
-      </figure>
+      {showImg ? (
+        <figure
+          className="RestaurantCard_img_fig"
+          onClick={() => setPreview([true, { name, image }])}
+        >
+          <img src={image.stringValue} alt={name.stringValue} loading="lazy" />
+        </figure>
+      ) : (
+        <Skeleton
+          key={id.stringValue}
+          width={"5rem"}
+          height={"5rem"}
+          backgroundColor="#1E1E30"
+        />
+      )}
 
       <div className="RestaurantCard_info">
         <h1>{name.stringValue}</h1>
