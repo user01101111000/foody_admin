@@ -11,10 +11,10 @@ export default async function createPdf(data) {
   const timesRomanFontBold = await pdfDoc.embedFont(
     StandardFonts.TimesRomanBold
   );
-  const pngUrl = "/src/assets/images/foody-logo.png";
-  const signature = "/src/assets/images/signature.png";
-  const stamp = "/src/assets/images/stamp.png";
-  const qrCode = "/src/assets/images/eacamp_qrCode.png";
+  const pngUrl = "/pdfImages/foody-logo.png";
+  const signature = "/pdfImages/signature.png";
+  const stamp = "/pdfImages/stamp.png";
+  const qrCode = "/pdfImages/eacamp_qrCode.png";
 
   const pngImageBytes = await fetch(pngUrl).then((res) => res.arrayBuffer());
   const stampBytes = await fetch(stamp).then((res) => res.arrayBuffer());
