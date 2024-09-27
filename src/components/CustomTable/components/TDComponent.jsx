@@ -9,13 +9,15 @@ export default function TDComponent({ td, editable }) {
   const [show, setShow] = useState(false);
   const [showImg, setShowImg] = useState(false);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = td[1].data;
-    img.onload = () => {
-      setShowImg(true);
-    };
-  }, [td[1].data]);
+  if (td[1].data.includes("https")) {
+    useEffect(() => {
+      const img = new Image();
+      img.src = td[1].data;
+      img.onload = () => {
+        setShowImg(true);
+      };
+    }, [td[1].data]);
+  }
 
   return (
     <tr className="CustomTable_tr">
