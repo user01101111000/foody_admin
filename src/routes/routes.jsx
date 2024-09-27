@@ -1,15 +1,18 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
+import LoginSuspense from "../components/LoadingSuspense";
 import ProtectedRoute from "../components/ProtectedRoute";
 import AdminLayout from "../layout/AdminLayout";
 import Login from "../pages/login/Login";
-import Dashboard from "../pages/dashboard/Dashboard";
-import Products from "../pages/products/Products";
-import Restaurant from "../pages/restaurants/Restaurant";
-import Category from "../pages/category/Category";
-import Offer from "../pages/offers/Offer";
-import Order from "../pages/orders/Order";
-import OrderHistory from "../pages/order-history/OrderHistory";
-import Settings from "../pages/settings/Settings";
+
+const Dashboard = lazy(() => import("../pages/dashboard/Dashboard"));
+const Products = lazy(() => import("../pages/products/Products"));
+const Restaurant = lazy(() => import("../pages/restaurants/Restaurant"));
+const Category = lazy(() => import("../pages/category/Category"));
+const Offer = lazy(() => import("../pages/offers/Offer"));
+const Order = lazy(() => import("../pages/orders/Order"));
+const OrderHistory = lazy(() => import("../pages/order-history/OrderHistory"));
+const Settings = lazy(() => import("../pages/settings/Settings"));
 
 const routes = [
   {
@@ -29,7 +32,11 @@ const routes = [
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <Suspense fallback={<LoginSuspense />}>
+        <Login />
+      </Suspense>
+    ),
   },
 ];
 
