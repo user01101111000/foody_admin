@@ -5,7 +5,7 @@ export default function useUpdatePasswordMutation() {
   return useMutation({
     mutationFn: updatePassword,
     onSuccess: (data) => {
-      localStorage.setItem("user", data.idToken);
+      localStorage.setItem("_fAx4", data.idToken);
     },
   });
 }

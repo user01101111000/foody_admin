@@ -3,18 +3,18 @@ import { createContext, useContext, useMemo, useState } from "react";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
-  const adminID = localStorage.getItem("user");
+  const adminID = localStorage.getItem("_fAx4");
 
   const [user, setUser] = useState(adminID || null);
 
   const generateUserLoginDatas = (userUID, remember) => {
-    if (remember) localStorage.setItem("user", userUID);
+    if (remember) localStorage.setItem("_fAx4", userUID);
 
     setUser(userUID);
   };
 
   const generateUserLogoutDatas = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("_fAx4");
     setUser(null);
   };
 
