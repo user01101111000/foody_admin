@@ -9,5 +9,11 @@ export default function ProtectedRoute({ children }) {
 
   const id = jwtDecode(user)?.user_id;
 
+  console.log(id);
+  console.log(`${import.meta.env.VITE_ADMIN_ID}`);
+  console.log(id == `${import.meta.env.VITE_ADMIN_ID}`);
+
   if (id == `${import.meta.env.VITE_ADMIN_ID}`) return children;
+
+
 }
