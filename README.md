@@ -83,3 +83,11 @@ This project is the admin side of Foody. In short, Foody is an online food order
   </tr>
 
 </table>
+
+## Developers 👨‍💻
+
+**Team Leader :** [user01101111000](https://github.com/user01101111000)
+
+---
+
+<h6 align="center">© Foody, TEAM 3E All rights reserved.</h6>
